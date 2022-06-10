@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class LabProgram {
+    public static void main(String{} args) {
+        Scanner scnr = new Scanner(System.in);
+
+        /* take in any number of each type of change and return the total with a double (float) */
+
+        double quarters = scnr.nextDouble();
+        double dimes = scnr.nextDouble();
+        double nickels = scnr.nextDouble();
+        double pennies = scnr.nextDouble();
+
+        quarters = quarters * 0.25;
+        dimes = dimes * 0.10;
+        nickels = nickels * 0.05;
+        pennies = pennies * 0.01;
+
+        double total = quarters + dimes + nickels + pennies;
+
+        System.out.print("Amount: $");
+        System.out.printf("%.2f", total);
+
+    }
+}
