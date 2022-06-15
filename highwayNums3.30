@@ -1,0 +1,42 @@
+import java.util.Scanner;
+
+/* create a program that tells user whether highway is primary of aux, and if aux, what primary it serves. Also, what direction it runs */
+
+public class LabProgram {
+public static void main(String[] args) {
+    Scanner scnr = new Scanner(System.in);
+
+    int highwayNumber;
+    int primaryNumber;
+
+    highwayNumber = scnr.nextInt();
+
+    if ((highwayNumber > 0) && (highwayNumber < 100)) {
+        if (highwayNumber % 2 == 0){
+           System.out.println("I-" + highwayNumber + " is primary, going east/west.");
+       }
+        else {
+           System.out.println("I-" + highwayNumber + " is primary, going north/south.");
+       }
+     }
+    
+    primaryNumber = highwayNumber % 100;
+    //System.out.println(primaryNumber);
+    
+    if ((highwayNumber > 99) && (highwayNumber < 1000)) {
+       if (highwayNumber % 2 == 0) {
+          System.out.println("I-" + highwayNumber + " is auxiliary, serving I-" + primaryNumber + ", going east/west.");
+       }
+       else {
+          System.out.println("I-" + highwayNumber + " is auxiliary, serving I-" + primaryNumber + ", going north/south.");
+       }
+    }
+   if ((highwayNumber < 1) || (highwayNumber > 999)) {
+      System.out.println(highwayNumber + " is not a valid interstate highway number.");
+      
+    }
+    
+           
+
+}
+}
